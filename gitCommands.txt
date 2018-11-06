@@ -28,4 +28,7 @@ The -u is to denote that origin is upstream and therefore the ultimate source of
 It only needs to be set once.
 >git push -u origin master
 
+and later changes can be pushed to github with:
+>git push
+
 Now the github repository will be in synch with the local one.
