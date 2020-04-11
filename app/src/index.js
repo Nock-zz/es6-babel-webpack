@@ -421,8 +421,8 @@ console.log('...countBy answer...', countBy('英国的狗说 woofᠧ', (char) =>
 .reduce((result, countByObject) => (result.count > countByObject.count)? result: countByObject ));
 
 
-function speak(line) {
-console.log(`The ${this.type} rabbit says '${line}'`);
+function speak(...lines) {
+console.log(`The ${this.type} rabbit says '${lines[0]}'`);
 }
 let whiteRabbit = {type: "white", speak: speak};
 
@@ -437,7 +437,7 @@ Rabbit0.prototype.speak = speak;
 Rabbit0.prototype.author = "Nick";
 
 let blackRabbit0 = new Rabbit0('black');
-blackRabbit0.speak("It is dark");
+blackRabbit0.speak(...[ "It is dark", "It is black"]);
 console.log('blackRabbit0.author:',blackRabbit0.author);
 console.log(Object.getOwnPropertyNames(blackRabbit0));
 
